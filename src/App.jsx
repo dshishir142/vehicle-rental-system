@@ -1,14 +1,24 @@
 import { useState } from 'react'
 
-import Nav from './navbar/nav.jsx'
-import Searchbox from '../SearchBox/Searchbox.jsx'
+import Nav from './home_page/navbar/nav.jsx'
+import Loginpage from './LoginPage/Loginpage.jsx'
+import Searchbox from './home_page/SearchBox/Searchbox.jsx'
+import Carpage from './Carpage/Carpage.jsx'
 function App() {
 
   return (
     
      <>
-     <Nav></Nav>
-     <Searchbox></Searchbox>
+     <Loginpage>
+
+     </Loginpage>
+     {/* <Carpage>
+
+      
+     </Carpage> */}
+    
+     {/* <Nav></Nav>
+     <Searchbox></Searchbox> */}
      
      </>
   )
