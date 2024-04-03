@@ -27,11 +27,11 @@ const Loginpage = () => {
      
       <div className={Styles.input}>
         <img src={Email_icon} alt="" />
-        <input type="email" placeholder='Email-id' />
+        <input type="email" placeholder='Email-id' id='email_login' />
       </div>
       <div className={Styles.input}>
         <img src={Password_icon} alt="" />
-        <input type="password" placeholder='Password' />
+        <input type="password" placeholder='Password' id='password_login' />
       </div>   
       </div>
 

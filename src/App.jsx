@@ -12,13 +12,13 @@ function App() {
   return (
     
      <>
-     <Displaying_vechile_API_data>
+     {/* <Displaying_vechile_API_data>
       
-     </Displaying_vechile_API_data>
+     </Displaying_vechile_API_data> */}
 
-     {/* <Loginpage>
+     { <Loginpage>
 
-     </Loginpage> */}
+     </Loginpage> }
      {/* <Carpage>
 
       
