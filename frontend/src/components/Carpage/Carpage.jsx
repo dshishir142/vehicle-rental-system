@@ -1,5 +1,5 @@
 import React from 'react'
-import Nav from '../home_page/navbar/nav'
+import Nav from '../../home_page/navbar/nav'
 import StyleCarpage from"./Carpage.module.css"
 
 const Carpage = () => {
