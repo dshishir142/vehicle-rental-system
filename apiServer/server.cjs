@@ -1,7 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const dataroutes = require('./dataRoutes');
-const carroutes = require('./carRoutes');
+const userroutes = require('./userRoutes');
+const vehicleroutes = require('./vehicleRoutes');
+const distributorroutes = require('./distributorRoutes');
 const cors = require('cors')
 const app = express();
 
@@ -13,10 +14,13 @@ app.use(express.json());
 app.use(cors());
 
 //for user data
-app.use('/api/data', dataroutes);
+app.use('/api/user', userroutes);
 
-//for car data
-app.use('/api/car', carroutes);
+//for vehicle data
+app.use('/api/vehicle', vehicleroutes);
+
+//for distributor data
+app.use('/api/distributor', distributorroutes);
 
 const url = 'mongodb://localhost:27017/vehicle_rental_system';
 mongoose.connect(url);
