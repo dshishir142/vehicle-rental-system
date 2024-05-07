@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import axios from "axios";
 import Styles from "../LoginPage/Loginpage.module.css";
-import User_icon from "../assets/Login_signup/email.png";
-import Password_icon from "../assets/Login_signup/password.png";
-import Email_icon from "../assets/Login_signup/person.png";
+import User_icon from "../../assets/Login_signup/email.png";
+import Password_icon from "../../assets/Login_signup/password.png";
+import Email_icon from "../../assets/Login_signup/person.png";
 
 const Loginpage = () => {
   const [action, setAction] = useState("login");

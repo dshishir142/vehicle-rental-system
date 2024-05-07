@@ -4,7 +4,7 @@ import Userdata from "./UserData.jsx"
 
 const Displaying_vechile_API_data = () => {
 
-    const API = "https://jsonplaceholder.typicode.com/users";
+    const API = "http://Localhost:8000/api/car";
 
     const [user, setUsers] = useState([]);
 
@@ -28,6 +28,7 @@ const Displaying_vechile_API_data = () => {
 
     }, [])
   // Import statements and other component logic
+  
 
 return (
     <>
@@ -36,8 +37,12 @@ return (
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Name</th>
-                    <th>Email</th>
+                    <th>VechileType</th>
+                    <th>company</th>
+                    <th>model</th>
+                    <th>price</th>
+                    <th>imageurl</th>
+                    <th>description</th>
                 </tr>
             </thead>
             <tbody>

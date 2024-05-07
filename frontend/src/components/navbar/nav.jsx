@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Stylenav from "./nav.module.css";
-import Loginpage from '../../LoginPage/Loginpage.jsx';
+import Loginpage from '../LoginPage/Loginpage.jsx';
 
 const Nav = () => {
   const [loginclicked, setLoginclicked] = useState(false);
