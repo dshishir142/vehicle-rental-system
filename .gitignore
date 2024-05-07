@@ -1,4 +1,6 @@
 node_modules
+apiServer/node_modules/*
+frontend/node_modules/*
 *lock.json
 *lock.yaml
 *lock.yml
