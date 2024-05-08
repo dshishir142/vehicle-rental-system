@@ -1,4 +1,5 @@
 const Data = require('./models/user');
+const mongoose = require('mongoose');
 
 //to return all the user data
 exports.getAllData =  async (req, res) => {
@@ -29,4 +30,26 @@ exports.createData = async (req, res) => {
       console.error(err);
       res.status(500).json({ status: "error", message: "Internal Server Error" });
     }
+};
+
+
+exports.deleteUser = async (req, res) => {
+  try {
+      const userId = req.params.id;
+
+      if (!mongoose.Types.ObjectId.isValid(userId)) {
+          return res.status(400).send('Invalid User ID');
+      }
+
+      const deletedUser = await Data.findByIdAndDelete(userId);
+
+      if (!deletedUser) {
+          return res.status(404).send('User not found');
+      }
+
+      res.json({ status: "success", message: "User deleted successfully" });
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ status: "error", message: "Internal Server Error" });
+  }
 };

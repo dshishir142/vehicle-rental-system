@@ -8,4 +8,7 @@ router.get('/',datacontroller.getAllData);
 //to handle post request
 router.post('/',datacontroller.createData);
 
+//to handle delete request
+router.delete('/:id',datacontroller.deleteUser);
+
 module.exports = router;

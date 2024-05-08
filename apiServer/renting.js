@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 
-// Import Vehicle and User models
+// Import Vehicle, User, and RentRequest models
 const Vehicle = require('./models/vehicle');
 const User = require('./models/user');
+const RentRequest = require('./models/rentRequest');
 
 // Middleware to handle vehicle renting
 router.post('/', async (req, res) => {
@@ -34,6 +35,12 @@ router.post('/', async (req, res) => {
 
         // Update the user document to keep track of rented vehicles
         await User.findByIdAndUpdate(userId, { $addToSet: { rentedVehicles: vehicleId } });
+
+        // Update the corresponding rent request status from 'pending' to 'approved'
+        await RentRequest.findOneAndUpdate(
+            { userId, vehicleId, status: 'pending' },
+            { $set: { status: 'approved' } }
+        );
 
         res.status(200).json({ message: "Vehicle rented successfully." });
     } catch (err) {
