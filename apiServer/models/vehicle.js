@@ -7,6 +7,7 @@ const vehicleSchema = new mongoose.Schema({
     price: String,
     imageUrl: String,
     description: String,
+    type : String,
     rented: {
         type: Boolean,
         default: false
