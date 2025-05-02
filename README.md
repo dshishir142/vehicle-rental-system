@@ -15,7 +15,7 @@ A full-stack Vehicle Rental and Sales Management System built with the MERN stac
 
 - State Management: React Context / Redux
 
-  
+  ---
 
 🧑‍💻 Roles & Features
 
