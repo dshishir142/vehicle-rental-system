@@ -2,6 +2,8 @@
 
 A full-stack Vehicle Rental and Sales Management System built with the MERN stack (MongoDB, Express, React, Node.js). It supports three roles: Users, Distributors, and Admins, each with distinct capabilities.
 
+---
+
 🔧 Tech Stack
 - Frontend: React.js
 
